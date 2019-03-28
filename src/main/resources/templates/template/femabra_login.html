@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      xmlns:th="http://www.thymeleaf.org"
+
+>
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Femabra</title>
+
+    <link rel="stylesheet" th:href="@{resources/bootstrap/css/bootstrap.min.css}" />
+    <link rel="stylesheet" th:href="@{resources/bootstrap/css/bootstrap-grid.min.css}" />
+    <link rel="stylesheet" th:href="@{resources/bootstrap/css/bootstrap-reboot.min.css}" />
+    <link rel="stylesheet" th:href="@{resources/css/body_login.css}" />
+    <script th:src="@{resources/angularjs/angular.min.js}"></script>
+</head>
+<body>
+
+
+<section layout:fragment="content"    >
+     loading...
+</section>
+
+<script th:src="@{resources/jquery/jquery-3.3.1.min.js}"></script>
+<script th:src="@{resources/jquery/jquery.backstretch.min.js}" ></script>
+<script th:src="@{resources/js/login.js}"></script>
+<script th:src="@{resources/bootstrap/js/bootstrap.min.js}"></script>
+<script th:src="@{resources/bootstrap/js/bootstrap.bundle.min.js}"></script>
+<script th:src="@{resources/js/forms.js}"></script>
+<script th:src="@{resources/notifyjs/notify.js}"></script>
+<script th:src="@{resources/notifyjs/customnotify.js}"></script>
+
+
+<script>
+
+
+    $.backstretch([
+         "background/bk_01.jpg"
+        , "background/bk_02.jpg"
+        , "background/bk_03.jpg"
+        , "background/bk_04.jpg"
+        , "background/bk_05.jpg"
+        , "background/bk_06.jpg"
+        , "background/bk_07.jpg"
+        , "background/bk_08.jpg"
+    ], {duration: 9000, fade: 750});
+</script>
+</body>
+</html>

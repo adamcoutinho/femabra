@@ -1,0 +1,48 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+layout:decorate="template/femabra_dashboard.html">
+    <section layout:fragment="menu-layout"    >
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav flex-column">
+                    <li class="nav-divider">
+                        Menu
+                    </li>
+                    <div th:each="link ,status: ${dashBackingBean.links}" >
+                    <li class="nav-item">
+                        <!--<a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"   data-target="#submenu-1"  aria-controls="submenu-1"><i class="fa fa-fw fa-user-circle"></i><span th:text="${link.name}"></span> <span class="badge badge-success">6</span></a>-->
+                        <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false"  th:attr="data-target= '#submenu-'+${status.index+1}, aria-controls='submenu-'+${status.index+1}"  ><i class="fa fa-fw fa-user-circle"></i><span th:text="${link.name}"></span> <span class="badge badge-success">6</span></a>
+
+                        <div  th:attr="id='submenu-'+${status.index+1}"  class="collapse submenu" style="">
+                            <ul class="nav flex-column">
+
+                                <div th:each="linkSon:${link.sons}">
+                                    <li class="nav-item">
+                                        <a class="nav-link"   ><span th:text="${linkSon.name}"></span></a>
+                                    </li>
+                                </div>
+                            </ul>
+                        </div>
+                    </li>
+                    </div>
+                </ul>
+            </div>
+        </nav>
+
+    </section>
+    <section layout:fragment="content"    >
+
+
+
+
+        <h1><div th:text="${userSession.name}"></div></h1>
+    </section>
+</div>
+
+
+

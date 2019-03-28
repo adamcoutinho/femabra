@@ -1,0 +1,24 @@
+package br.pa.com.femabra;
+
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
+
+import javax.persistence.Entity;
+
+@SpringBootApplication
+public class FemabraApplication implements CommandLineRunner {
+
+    public static void main(String[] args) {
+        SpringApplication.run(FemabraApplication.class, args);
+    }
+
+    @Override
+    public void run(String... args) throws Exception {
+
+        System.out.println("init");
+
+    }
+}

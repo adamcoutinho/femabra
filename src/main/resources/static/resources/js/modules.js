@@ -1,0 +1,1 @@
+import ClientResources from '../backendJS/client_resources.js';

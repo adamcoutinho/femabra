@@ -1,0 +1,769 @@
+<div xmlns="http://www.w3.org/1999/xhtml"
+     xmlns:th="http://www.thymeleaf.org"
+     xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+     layout:decorate="template/femabra_pipeline.html">
+    <section layout:fragment="content"    >
+
+        <!-- .app -->
+        <div class="app">
+            <!--[if lt IE 10]>
+            <div class="page-message" role="alert">You are using an <strong>outdated</strong> browser. Please <a class="alert-link" href="http://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</div>
+            <![endif]-->
+            <!-- .app-header -->
+            <header class="app-header app-header-dark">
+                <!-- .top-bar -->
+                <div class="top-bar">
+                    <!-- .top-bar-brand -->
+                    <div class="top-bar-brand">
+                        <a href="index.html"><img th:src="@{ulooper/assets/images/brand-inverse.png}" alt="" style="height: 32px;width: auto;"></a>
+                    </div><!-- /.top-bar-brand -->
+                    <!-- .top-bar-list -->
+                    <div class="top-bar-list">
+                        <!-- .top-bar-item -->
+                        <div class="top-bar-item px-2 d-md-none d-lg-none d-xl-none">
+                            <!-- toggle menu -->
+                            <button class="hamburger hamburger-squeeze" type="button" data-toggle="aside" aria-label="toggle menu"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button> <!-- /toggle menu -->
+                        </div><!-- /.top-bar-item -->
+                        <!-- .top-bar-item -->
+                        <div class="top-bar-item top-bar-item-full">
+                            <!-- .top-bar-search -->
+                            <form class="top-bar-search">
+                                <div class="input-group input-group-search">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><span class="oi oi-magnifying-glass"></span></span>
+                                    </div><input type="text" class="form-control" aria-label="Search" placeholder="Search">
+                                </div>
+                            </form><!-- /.top-bar-search -->
+                        </div><!-- /.top-bar-item -->
+                        <!-- .top-bar-item -->
+                        <div class="top-bar-item top-bar-item-right px-0 d-none d-sm-flex">
+                            <!-- .nav -->
+                            <ul class="header-nav nav">
+                                <!-- .nav-item -->
+                                <li class="nav-item dropdown header-nav-dropdown has-notified">
+                                    <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="oi oi-pulse"></span></a>
+                                    <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                                    <div class="dropdown-menu dropdown-menu-rich dropdown-menu-right">
+                                        <h6 class="dropdown-header stop-propagation">
+                                            <span>Activities <span class="badge">(2)</span></span>
+                                        </h6><!-- .dropdown-scroll -->
+                                        <div class="dropdown-scroll perfect-scrollbar">
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item unread">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/avatars/uifaces15.jpg" alt="">
+                                                </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="text"> Jeffrey Wells created a schedule </p><span class="date">Just now</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item unread">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/avatars/uifaces16.jpg" alt="">
+                                                </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="text"> Anna Vargas logged a chat </p><span class="date">3 hours ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/avatars/uifaces17.jpg" alt="">
+                                                </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="text"> Sara Carr invited to Stilearn Admin </p><span class="date">5 hours ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/avatars/uifaces18.jpg" alt="">
+                                                </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="text"> Arthur Carroll updated a project </p><span class="date">1 day ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/avatars/uifaces19.jpg" alt="">
+                                                </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="text"> Hannah Romero created a task </p><span class="date">1 day ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/avatars/uifaces20.jpg" alt="">
+                                                </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="text"> Angela Peterson assign a task to you </p><span class="date">2 days ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/avatars/uifaces21.jpg" alt="">
+                                                </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="text"> Shirley Mason and 3 others followed you </p><span class="date">2 days ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                        </div><!-- /.dropdown-scroll -->
+                                        <a href="user-activities.html" class="dropdown-footer">All activities <i class="fas fa-fw fa-long-arrow-alt-right"></i></a>
+                                    </div><!-- /.dropdown-menu -->
+                                </li><!-- /.nav-item -->
+                                <!-- .nav-item -->
+                                <li class="nav-item dropdown header-nav-dropdown has-notified">
+                                    <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="oi oi-envelope-open"></span></a>
+                                    <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                                    <div class="dropdown-menu dropdown-menu-rich dropdown-menu-right">
+                                        <h6 class="dropdown-header stop-propagation">
+                                            <span>Messages</span> <a href="#">Mark all as read</a>
+                                        </h6><!-- .dropdown-scroll -->
+                                        <div class="dropdown-scroll perfect-scrollbar">
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item unread">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/avatars/team1.jpg" alt="">
+                                                </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="subject"> Stilearning </p>
+                                                    <p class="text text-truncate"> Invitation: Joe's Dinner @ Fri Aug 22 </p><span class="date">2 hours ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/avatars/team3.png" alt="">
+                                                </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="subject"> Openlane </p>
+                                                    <p class="text text-truncate"> Final reminder: Upgrade to Pro </p><span class="date">23 hours ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item">
+                                                <div class="tile tile-circle bg-green"> GZ </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="subject"> Gogo Zoom </p>
+                                                    <p class="text text-truncate"> Live healthy with this wireless sensor. </p><span class="date">1 day ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item">
+                                                <div class="tile tile-circle bg-teal"> GD </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="subject"> Gold Dex </p>
+                                                    <p class="text text-truncate"> Invitation: Design Review @ Mon Jul 7 </p><span class="date">1 day ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item">
+                                                <div class="user-avatar">
+                                                    <img src="assets/images/avatars/team2.png" alt="">
+                                                </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="subject"> Creative Division </p>
+                                                    <p class="text text-truncate"> Need some feedback on this please </p><span class="date">2 days ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                            <!-- .dropdown-item -->
+                                            <a href="#" class="dropdown-item">
+                                                <div class="tile tile-circle bg-pink"> LD </div>
+                                                <div class="dropdown-item-body">
+                                                    <p class="subject"> Lab Drill </p>
+                                                    <p class="text text-truncate"> Our UX exercise is ready </p><span class="date">6 days ago</span>
+                                                </div>
+                                            </a> <!-- /.dropdown-item -->
+                                        </div><!-- /.dropdown-scroll -->
+                                        <a href="page-messages.html" class="dropdown-footer">All messages <i class="fas fa-fw fa-long-arrow-alt-right"></i></a>
+                                    </div><!-- /.dropdown-menu -->
+                                </li><!-- /.nav-item -->
+                                <!-- .nav-item -->
+                                <li class="nav-item dropdown header-nav-dropdown">
+                                    <a class="nav-link" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="oi oi-grid-three-up"></span></a>
+                                    <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                                    <div class="dropdown-menu dropdown-menu-rich dropdown-menu-right">
+                                        <!-- .dropdown-sheets -->
+                                        <div class="dropdown-sheets">
+                                            <!-- .dropdown-sheet-item -->
+                                            <div class="dropdown-sheet-item">
+                                                <a href="#" class="tile-wrapper"><span class="tile tile-lg bg-indigo"><i class="oi oi-people"></i></span> <span class="tile-peek">Teams</span></a>
+                                            </div><!-- /.dropdown-sheet-item -->
+                                            <!-- .dropdown-sheet-item -->
+                                            <div class="dropdown-sheet-item">
+                                                <a href="#" class="tile-wrapper"><span class="tile tile-lg bg-teal"><i class="oi oi-fork"></i></span> <span class="tile-peek">Projects</span></a>
+                                            </div><!-- /.dropdown-sheet-item -->
+                                            <!-- .dropdown-sheet-item -->
+                                            <div class="dropdown-sheet-item">
+                                                <a href="#" class="tile-wrapper"><span class="tile tile-lg bg-pink"><i class="fa fa-tasks"></i></span> <span class="tile-peek">Tasks</span></a>
+                                            </div><!-- /.dropdown-sheet-item -->
+                                            <!-- .dropdown-sheet-item -->
+                                            <div class="dropdown-sheet-item">
+                                                <a href="#" class="tile-wrapper"><span class="tile tile-lg bg-yellow"><i class="oi oi-fire"></i></span> <span class="tile-peek">Feeds</span></a>
+                                            </div><!-- /.dropdown-sheet-item -->
+                                            <!-- .dropdown-sheet-item -->
+                                            <div class="dropdown-sheet-item">
+                                                <a href="#" class="tile-wrapper"><span class="tile tile-lg bg-cyan"><i class="oi oi-document"></i></span> <span class="tile-peek">Files</span></a>
+                                            </div><!-- /.dropdown-sheet-item -->
+                                        </div><!-- .dropdown-sheets -->
+                                    </div><!-- .dropdown-menu -->
+                                </li><!-- /.nav-item -->
+                            </ul><!-- /.nav -->
+                            <!-- .btn-account -->
+                            <div class="dropdown">
+                                <button class="btn-account d-none d-md-flex" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="user-avatar user-avatar-md"><img src="assets/images/avatars/profile.jpg" alt=""></span> <span class="account-summary pr-lg-4 d-none d-lg-block"><span class="account-name">Beni Arisandi</span> <span class="account-description">Marketing Manager</span></span></button>
+                                <div class="dropdown-arrow dropdown-arrow-left"></div><!-- .dropdown-menu -->
+                                <div class="dropdown-menu">
+                                    <h6 class="dropdown-header d-none d-md-block d-lg-none"> Beni Arisandi </h6><a class="dropdown-item" href="user-profile.html"><span class="dropdown-icon oi oi-person"></span> Profile</a> <a class="dropdown-item" href="auth-signin-v1.html"><span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Help Center</a> <a class="dropdown-item" href="#">Ask Forum</a> <a class="dropdown-item" href="#">Keyboard Shortcuts</a>
+                                </div><!-- /.dropdown-menu -->
+                            </div><!-- /.btn-account -->
+                        </div><!-- /.top-bar-item -->
+                    </div><!-- /.top-bar-list -->
+                </div><!-- /.top-bar -->
+            </header><!-- /.app-header -->
+            <!-- .app-aside -->
+            <aside class="app-aside app-aside-expand-md app-aside-light">
+                <!-- .aside-content -->
+                <div class="aside-content">
+                    <!-- .aside-header -->
+                    <header class="aside-header d-block d-md-none">
+                        <!-- .btn-account -->
+                        <button class="btn-account" type="button" data-toggle="collapse" data-target="#dropdown-aside"><span class="user-avatar user-avatar-lg"><img src="assets/images/avatars/profile.jpg" alt=""></span> <span class="account-icon"><span class="fa fa-caret-down fa-lg"></span></span> <span class="account-summary"><span class="account-name">Beni Arisandi</span> <span class="account-description">Marketing Manager</span></span></button> <!-- /.btn-account -->
+                        <!-- .dropdown-aside -->
+                        <div id="dropdown-aside" class="dropdown-aside collapse">
+                            <!-- dropdown-items -->
+                            <div class="pb-3">
+                                <a class="dropdown-item" href="user-profile.html"><span class="dropdown-icon oi oi-person"></span> Profile</a> <a class="dropdown-item" href="auth-signin-v1.html"><span class="dropdown-icon oi oi-account-logout"></span> Logout</a>
+                                <div class="dropdown-divider"></div><a class="dropdown-item" href="#">Help Center</a> <a class="dropdown-item" href="#">Ask Forum</a> <a class="dropdown-item" href="#">Keyboard Shortcuts</a>
+                            </div><!-- /dropdown-items -->
+                        </div><!-- /.dropdown-aside -->
+                    </header><!-- /.aside-header -->
+                    <!-- .aside-menu -->
+                    <div class="aside-menu overflow-hidden">
+                        <!-- .stacked-menu -->
+                        <nav id="stacked-menu" class="stacked-menu">
+                            <!-- .menu -->
+                            <ul class="menu">
+                                <!-- .menu-item -->
+                                <li class="menu-item has-active">
+                                    <a href="index.html" class="menu-link"><span class="menu-icon fas fa-solar-panel"></span> <span class="menu-text">Pipeline</span></a>
+                                </li><!-- /.menu-item -->
+                                <!-- .menu-item -->
+
+                            </ul><!-- /.menu -->
+                            <div th:each="link,status:${pipeLineBackingBean.links}">
+                            <ul class="menu">
+
+                                    <li class="menu-item has-child">
+
+                                        <a href="#" th:attr="id=''+${status.index+1}" class="menu-link" ><span class="menu-icon far fa-file"></span> <span class="menu-text"  th:text="${link.name}" ></span></a> <!-- child menu -->
+                                        <ul class="menu">
+                                            <div th:each="linkSon:${link.sons}">
+                                                <li class="menu-item">
+                                                    <a href="page-clients.html" class="menu-link" th:text="${linkSon.name}" ></a>
+                                                </li>
+                                            </div>
+                                        </ul><!-- /child menu -->
+
+                                    </li><!-- /.menu-item -->
+
+                            </ul>
+                            </div>
+                        </nav><!-- /.stacked-menu -->
+                    </div><!-- /.aside-menu -->
+                    <!-- Skin changer -->
+                    <footer class="aside-footer border-top p-3">
+                        <button class="btn btn-light btn-block text-primary" data-toggle="skin">Night mode <i class="fas fa-moon ml-1"></i></button>
+                    </footer><!-- /Skin changer -->
+                </div><!-- /.aside-content -->
+            </aside><!-- /.app-aside -->
+            <!-- .app-main -->
+            <main class="app-main">
+                <!-- .wrapper -->
+                <div class="wrapper">
+                    <!-- .page -->
+                    <div class="page">
+                        <!-- .page-inner -->
+                        <div class="page-inner">
+                            <header class="page-navs shadow-sm pr-3">
+                                <!-- .btn-account -->
+                                <a href="page-project.html" class="btn-account">
+                                    <div class="has-badge">
+                                        <span class="tile bg-pink text-white">SP</span> <span class="user-avatar user-avatar-xs"><img src="assets/images/avatars/team4.jpg" alt=""></span>
+                                    </div>
+                                    <div class="account-summary">
+                                        <h1 class="card-title"> Syrena Project </h1>
+                                        <h6 class="card-subtitle text-muted"> 4 deadline · 2 overdue </h6>
+                                    </div>
+                                </a> <!-- /.btn-account -->
+                                <!-- right actions -->
+                                <div class="ml-auto">
+                                    <!-- invite members -->
+                                    <div class="dropdown d-inline-block">
+                                        <button type="button" class="btn btn-light btn-icon" title="Invite members" data-toggle="dropdown" data-display="static" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user-plus"></i></button>
+                                        <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                                        <div class="dropdown-menu dropdown-menu-right dropdown-menu-rich stop-propagation">
+                                            <div class="dropdown-header"> Add members </div>
+                                            <div class="form-group px-3 py-2 m-0">
+                                                <input type="text" class="form-control" placeholder="e.g. @bent10" data-toggle="tribute" data-remote="assets/data/tribute.json" data-menu-container="#people-list" data-item-template="true" data-autofocus="true"> <small class="form-text text-muted">Search people by username or email address to invite them.</small>
+                                            </div>
+                                            <div id="people-list" class="tribute-inline stop-propagation"></div><a href="#" class="dropdown-footer">Invite member by link <i class="far fa-clone"></i></a>
+                                        </div><!-- /.dropdown-menu -->
+                                    </div><!-- /invite members -->
+                                    <button type="button" class="btn btn-light btn-icon" data-toggle="page-expander" title="Expand board"><i class="oi oi-fullscreen-enter fa-rotate-90 fa-fw"></i></button> <button type="button" class="btn btn-light btn-icon" data-toggle="modal" data-target="#modalBoardConfig" title="Show menu"><i class="fa fa-cog fa-fw"></i></button>
+                                </div><!-- /right actions -->
+                            </header><!-- /.page-navs -->
+
+                            <!-- .page-section -->
+                            <div class="page-section">
+
+
+
+
+                                <!-- .board -->
+                                <div id="board" class="board" data-toggle="sortable" data-draggable=".tasks" data-handle=".task-header" data-delay="100" data-force-fallback="true">
+                                    <!-- .tasks -->
+                                    <div class="tasks">
+                                        <!-- .tasks-header -->
+                                        <div class="task-header">
+                                            <h3 class="task-title mr-auto"> Backlogs <span class="badge text-muted">(3)</span>
+                                            </h3><!-- .btn -->
+                                            <button class="btn btn-light btn-icon text-muted" data-toggle="modal" data-target="#modalNewTask" title="Add task"><i class="fa fa-plus-circle"></i></button> <!-- /.btn -->
+                                            <!-- .dropdown -->
+                                            <div class="dropdown">
+                                                <!-- .btn -->
+                                                <button class="btn btn-light btn-icon text-muted" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></button> <!-- /.btn -->
+                                                <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Edit</a> <a href="#" class="dropdown-item">Move</a> <a href="#" class="dropdown-item">Duplicate</a> <a href="#" class="dropdown-item">Subcribe</a> <a href="#" class="dropdown-item">Trash</a>
+                                                </div><!-- /.dropdown-menu -->
+                                            </div><!-- /.dropdown -->
+                                        </div><!-- /.tasks-header -->
+                                        <!-- .task-body -->
+                                        <div class="task-body" data-toggle="sortable" data-group="tasks" data-delay="50" data-force-fallback="true">
+                                            <!-- .task-issue -->
+                                            <div class="task-issue">
+                                                <!-- .card -->
+                                                <div class="card">
+                                                    <!-- .card-header -->
+                                                    <div class="card-header">
+                                                        <div class="task-label-group">
+                                                            <span class="task-label bg-teal"></span> <span class="task-label bg-green"></span>
+                                                        </div>
+                                                        <h4 class="card-title">
+                                                            <a href="#" data-toggle="modal" data-target="#modalViewTask">Review</a>
+                                                        </h4>
+                                                        <h6 class="card-subtitle text-muted">
+                                                            <span class="text-muted">03:11</span> / <span class="text-muted">6:00</span> <span class="mx-1">·</span> <span class="due-date"><i class="far fa-fw fa-clock"></i> Apr 07</span>
+                                                        </h6>
+                                                    </div><!-- /.card-header -->
+                                                    <!-- .card-body -->
+                                                    <div class="card-body pt-0">
+                                                        <!-- .list-group -->
+                                                        <div class="list-group">
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <!-- members -->
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Johnny Day">
+                                                                        <img src="assets/images/avatars/uifaces2.jpg" alt="Johnny Day">
+                                                                    </figure>
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Sarah Bishop">
+                                                                        <img src="assets/images/avatars/uifaces3.jpg" alt="Sarah Bishop">
+                                                                    </figure><!-- /members -->
+                                                                </div><!-- /.list-group-item-body -->
+                                                            </div><!-- /.list-group-item -->
+                                                        </div><!-- /.list-group -->
+                                                    </div><!-- /.card-body -->
+                                                    <!-- .card-footer -->
+                                                    <div class="card-footer">
+                                                        <a href="#" class="card-footer-item card-footer-item-bordered text-muted"><i class="fa fa-play text-teal"></i></a>
+                                                    </div><!-- /.card-footer -->
+                                                </div><!-- .card -->
+                                            </div><!-- /.task-issue -->
+                                            <!-- .task-issue -->
+                                            <div class="task-issue">
+                                                <!-- .card -->
+                                                <div class="card">
+                                                    <!-- .card-header -->
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">
+                                                            <a href="#" data-toggle="modal" data-target="#modalViewTask">Deploy</a>
+                                                        </h4>
+                                                        <h6 class="card-subtitle text-muted">
+                                                            <span class="text-muted">08:36</span> / <span class="text-muted">12:00</span> <span class="mx-1">·</span> <span class="due-date"><i class="far fa-fw fa-clock"></i> In 2 days</span>
+                                                        </h6>
+                                                    </div><!-- /.card-header -->
+                                                    <!-- .card-body -->
+                                                    <div class="card-body pt-0">
+                                                        <!-- .list-group -->
+                                                        <div class="list-group">
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <!-- members -->
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Johnny Day">
+                                                                        <img src="assets/images/avatars/uifaces2.jpg" alt="Johnny Day">
+                                                                    </figure>
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Sarah Bishop">
+                                                                        <img src="assets/images/avatars/uifaces3.jpg" alt="Sarah Bishop">
+                                                                    </figure>
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Craig Hansen">
+                                                                        <img src="assets/images/avatars/uifaces5.jpg" alt="Craig Hansen">
+                                                                    </figure>
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Jane Barnes">
+                                                                        <img src="assets/images/avatars/uifaces9.jpg" alt="Jane Barnes">
+                                                                    </figure><!-- /members -->
+                                                                </div><!-- /.list-group-item-body -->
+                                                            </div><!-- /.list-group-item -->
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item pt-0" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <div class="progress progress-xs">
+                                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div><!-- /.list-group-item-body -->
+                                                                <!-- .list-group-item-figure -->
+                                                                <div class="list-group-item-figure">
+                                                                    <span class="todos">0/5</span>
+                                                                </div><!-- /.list-group-item-figure -->
+                                                            </div><!-- /.list-group-item -->
+                                                        </div><!-- /.list-group -->
+                                                    </div><!-- /.card-body -->
+                                                    <!-- .card-footer -->
+                                                    <div class="card-footer">
+                                                        <a href="#" class="card-footer-item card-footer-item-bordered text-muted" data-toggle="modal" data-target="#modalViewTask"><i class="oi oi-comment-square mr-1"></i> 8</a> <a href="#" class="card-footer-item card-footer-item-bordered text-muted"><i class="fa fa-play text-teal"></i></a>
+                                                    </div><!-- /.card-footer -->
+                                                </div><!-- .card -->
+                                            </div><!-- /.task-issue -->
+                                            <!-- .task-issue -->
+                                            <div class="task-issue">
+                                                <!-- .card -->
+                                                <div class="card">
+                                                    <!-- .card-header -->
+                                                    <div class="card-header">
+                                                        <h4 class="card-title">
+                                                            <a href="#" data-toggle="modal" data-target="#modalViewTask">Go live!</a>
+                                                        </h4>
+                                                        <h6 class="card-subtitle text-muted">
+                                                            <span class="text-muted">11:36</span> / <span class="text-muted">12:00</span> <span class="mx-1">·</span> <span class="due-date"><i class="far fa-fw fa-clock"></i> Mar 23</span>
+                                                        </h6>
+                                                    </div><!-- /.card-header -->
+                                                    <!-- .card-body -->
+                                                    <div class="card-body pt-0">
+                                                        <!-- .list-group -->
+                                                        <div class="list-group">
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <!-- members -->
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Johnny Day">
+                                                                        <img src="assets/images/avatars/uifaces2.jpg" alt="Johnny Day">
+                                                                    </figure>
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Sarah Bishop">
+                                                                        <img src="assets/images/avatars/uifaces3.jpg" alt="Sarah Bishop">
+                                                                    </figure>
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Craig Hansen">
+                                                                        <img src="assets/images/avatars/uifaces5.jpg" alt="Craig Hansen">
+                                                                    </figure>
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Jane Barnes">
+                                                                        <img src="assets/images/avatars/uifaces9.jpg" alt="Jane Barnes">
+                                                                    </figure><!-- /members -->
+                                                                </div><!-- /.list-group-item-body -->
+                                                            </div><!-- /.list-group-item -->
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item pt-0" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <div class="progress progress-xs">
+                                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div><!-- /.list-group-item-body -->
+                                                                <!-- .list-group-item-figure -->
+                                                                <div class="list-group-item-figure">
+                                                                    <span class="todos">0/2</span>
+                                                                </div><!-- /.list-group-item-figure -->
+                                                            </div><!-- /.list-group-item -->
+                                                        </div><!-- /.list-group -->
+                                                    </div><!-- /.card-body -->
+                                                    <!-- .card-footer -->
+                                                    <div class="card-footer">
+                                                        <a href="#" class="card-footer-item card-footer-item-bordered text-muted" data-toggle="modal" data-target="#modalViewTask"><i class="oi oi-comment-square mr-1"></i> 24</a> <a href="#" class="card-footer-item card-footer-item-bordered text-muted"><i class="fa fa-play text-teal"></i></a>
+                                                    </div><!-- /.card-footer -->
+                                                </div><!-- .card -->
+                                            </div><!-- /.task-issue -->
+                                        </div><!-- /.task-body -->
+                                    </div><!-- /.tasks -->
+                                    <!-- .tasks -->
+                                    <div class="tasks">
+                                        <!-- .tasks-header -->
+                                        <div class="task-header">
+                                            <h3 class="task-title mr-auto"> In Progress <span class="badge text-muted">(1)</span>
+                                            </h3><!-- .btn -->
+                                            <button class="btn btn-light btn-icon text-muted" data-toggle="modal" data-target="#modalNewTask" title="Add task"><i class="fa fa-plus-circle"></i></button> <!-- /.btn -->
+                                            <!-- .dropdown -->
+                                            <div class="dropdown">
+                                                <!-- .btn -->
+                                                <button class="btn btn-light btn-icon text-muted" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></button> <!-- /.btn -->
+                                                <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Edit</a> <a href="#" class="dropdown-item">Move</a> <a href="#" class="dropdown-item">Duplicate</a> <a href="#" class="dropdown-item">Subcribe</a> <a href="#" class="dropdown-item">Trash</a>
+                                                </div><!-- /.dropdown-menu -->
+                                            </div><!-- /.dropdown -->
+                                        </div><!-- /.tasks-header -->
+                                        <!-- .task-body -->
+                                        <div class="task-body" data-toggle="sortable" data-group="tasks" data-delay="50" data-force-fallback="true">
+                                            <!-- .task-issue -->
+                                            <div class="task-issue">
+                                                <!-- .card -->
+                                                <div class="card">
+                                                    <!-- .card-header -->
+                                                    <div class="card-header">
+                                                        <div class="task-label-group">
+                                                            <span class="task-label bg-red"></span> <span class="task-label bg-cyan"></span>
+                                                        </div>
+                                                        <h4 class="card-title">
+                                                            <a href="#" data-toggle="modal" data-target="#modalViewTask">Apply new styles</a>
+                                                        </h4>
+                                                        <h6 class="card-subtitle text-muted">
+                                                            <span class="text-red">50:02</span> / <span class="text-muted">48:00</span> <span class="mx-1">·</span> <span class="due-date"><i class="far fa-fw fa-clock"></i> Tomorrow</span>
+                                                        </h6>
+                                                    </div><!-- /.card-header -->
+                                                    <!-- .card-body -->
+                                                    <div class="card-body pt-0">
+                                                        <!-- .list-group -->
+                                                        <div class="list-group">
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <!-- members -->
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Johnny Day">
+                                                                        <img src="assets/images/avatars/uifaces2.jpg" alt="Johnny Day">
+                                                                    </figure>
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Sarah Bishop">
+                                                                        <img src="assets/images/avatars/uifaces3.jpg" alt="Sarah Bishop">
+                                                                    </figure><!-- /members -->
+                                                                </div><!-- /.list-group-item-body -->
+                                                            </div><!-- /.list-group-item -->
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item pt-0" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <div class="progress progress-xs">
+                                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 90.47619047619048%;" aria-valuenow="90.47619047619048" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div><!-- /.list-group-item-body -->
+                                                                <!-- .list-group-item-figure -->
+                                                                <div class="list-group-item-figure">
+                                                                    <span class="todos">19/21</span>
+                                                                </div><!-- /.list-group-item-figure -->
+                                                            </div><!-- /.list-group-item -->
+                                                        </div><!-- /.list-group -->
+                                                    </div><!-- /.card-body -->
+                                                    <!-- .card-footer -->
+                                                    <div class="card-footer">
+                                                        <a href="#" class="card-footer-item card-footer-item-bordered text-muted" data-toggle="modal" data-target="#modalViewTask"><i class="oi oi-comment-square mr-1"></i> 36</a> <a href="#" class="card-footer-item card-footer-item-bordered text-muted"><i class="fa fa-pause"></i></a>
+                                                    </div><!-- /.card-footer -->
+                                                </div><!-- .card -->
+                                            </div><!-- /.task-issue -->
+                                        </div><!-- /.task-body -->
+                                    </div><!-- /.tasks -->
+                                    <!-- .tasks -->
+                                    <div class="tasks">
+                                        <!-- .tasks-header -->
+                                        <div class="task-header">
+                                            <h3 class="task-title mr-auto"> In Review <span class="badge text-muted">(1)</span>
+                                            </h3><!-- .btn -->
+                                            <button class="btn btn-light btn-icon text-muted" data-toggle="modal" data-target="#modalNewTask" title="Add task"><i class="fa fa-plus-circle"></i></button> <!-- /.btn -->
+                                            <!-- .dropdown -->
+                                            <div class="dropdown">
+                                                <!-- .btn -->
+                                                <button class="btn btn-light btn-icon text-muted" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></button> <!-- /.btn -->
+                                                <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Edit</a> <a href="#" class="dropdown-item">Move</a> <a href="#" class="dropdown-item">Duplicate</a> <a href="#" class="dropdown-item">Subcribe</a> <a href="#" class="dropdown-item">Trash</a>
+                                                </div><!-- /.dropdown-menu -->
+                                            </div><!-- /.dropdown -->
+                                        </div><!-- /.tasks-header -->
+                                        <!-- .task-body -->
+                                        <div class="task-body" data-toggle="sortable" data-group="tasks" data-delay="50" data-force-fallback="true">
+                                            <!-- .task-issue -->
+                                            <div class="task-issue">
+                                                <!-- .card -->
+                                                <div class="card">
+                                                    <!-- .card-header -->
+                                                    <div class="card-header">
+                                                        <div class="task-label-group">
+                                                            <span class="task-label bg-purple"></span>
+                                                        </div>
+                                                        <h4 class="card-title">
+                                                            <a href="#" data-toggle="modal" data-target="#modalViewTask">Write new content</a>
+                                                        </h4>
+                                                        <h6 class="card-subtitle text-muted">
+                                                            <span class="text-muted">03:36</span> / <span class="text-muted">04:00</span> <span class="mx-1">·</span> <span class="due-date"><i class="far fa-fw fa-clock"></i> In 3 days</span>
+                                                        </h6>
+                                                    </div><!-- /.card-header -->
+                                                    <!-- .card-body -->
+                                                    <div class="card-body pt-0">
+                                                        <!-- .list-group -->
+                                                        <div class="list-group">
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <!-- members -->
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Johnny Day">
+                                                                        <img src="assets/images/avatars/uifaces2.jpg" alt="Johnny Day">
+                                                                    </figure><!-- /members -->
+                                                                </div><!-- /.list-group-item-body -->
+                                                            </div><!-- /.list-group-item -->
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item pt-0" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <div class="progress progress-xs">
+                                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div><!-- /.list-group-item-body -->
+                                                                <!-- .list-group-item-figure -->
+                                                                <div class="list-group-item-figure">
+                                                                    <span class="todos">6/6</span>
+                                                                </div><!-- /.list-group-item-figure -->
+                                                            </div><!-- /.list-group-item -->
+                                                        </div><!-- /.list-group -->
+                                                    </div><!-- /.card-body -->
+                                                    <!-- .card-footer -->
+                                                    <div class="card-footer">
+                                                        <a href="#" class="card-footer-item card-footer-item-bordered text-muted"><i class="fa fa-pause"></i></a>
+                                                    </div><!-- /.card-footer -->
+                                                </div><!-- .card -->
+                                            </div><!-- /.task-issue -->
+                                        </div><!-- /.task-body -->
+                                    </div><!-- /.tasks -->
+                                    <!-- .tasks -->
+                                    <div class="tasks">
+                                        <!-- .tasks-header -->
+                                        <div class="task-header">
+                                            <h3 class="task-title mr-auto"> Done <span class="badge text-muted">(1)</span>
+                                            </h3><!-- .btn -->
+                                            <button class="btn btn-light btn-icon text-muted" data-toggle="modal" data-target="#modalNewTask" title="Add task"><i class="fa fa-plus-circle"></i></button> <!-- /.btn -->
+                                            <!-- .dropdown -->
+                                            <div class="dropdown">
+                                                <!-- .btn -->
+                                                <button class="btn btn-light btn-icon text-muted" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></button> <!-- /.btn -->
+                                                <div class="dropdown-arrow"></div><!-- .dropdown-menu -->
+                                                <div class="dropdown-menu dropdown-menu-right">
+                                                    <a href="#" class="dropdown-item">Edit</a> <a href="#" class="dropdown-item">Move</a> <a href="#" class="dropdown-item">Duplicate</a> <a href="#" class="dropdown-item">Subcribe</a> <a href="#" class="dropdown-item">Trash</a>
+                                                </div><!-- /.dropdown-menu -->
+                                            </div><!-- /.dropdown -->
+                                        </div><!-- /.tasks-header -->
+                                        <!-- .task-body -->
+                                        <div class="task-body" data-toggle="sortable" data-group="tasks" data-delay="50" data-force-fallback="true">
+                                            <!-- .task-issue -->
+                                            <div class="task-issue">
+                                                <!-- .card -->
+                                                <div class="card">
+                                                    <!-- .card-header -->
+                                                    <div class="card-header">
+                                                        <div class="task-label-group">
+                                                            <span class="task-label bg-teal"></span> <span class="task-label bg-pink"></span> <span class="task-label bg-yellow"></span>
+                                                        </div>
+                                                        <h4 class="card-title">
+                                                            <a href="#" data-toggle="modal" data-target="#modalViewTask">Redesign website</a>
+                                                        </h4>
+                                                        <h6 class="card-subtitle text-muted">
+                                                            <span class="text-muted">16:36</span> / <span class="text-muted">24:00</span> <span class="mx-1">·</span> <span class="due-date"><i class="far fa-fw fa-clock"></i> Apr 02</span>
+                                                        </h6>
+                                                    </div><!-- /.card-header -->
+                                                    <!-- .card-body -->
+                                                    <div class="card-body pt-0">
+                                                        <!-- .list-group -->
+                                                        <div class="list-group">
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <!-- members -->
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Johnny Day">
+                                                                        <img src="assets/images/avatars/uifaces2.jpg" alt="Johnny Day">
+                                                                    </figure>
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Sarah Bishop">
+                                                                        <img src="assets/images/avatars/uifaces3.jpg" alt="Sarah Bishop">
+                                                                    </figure>
+                                                                    <figure class="user-avatar user-avatar-sm" data-toggle="tooltip" title="Craig Hansen">
+                                                                        <img src="assets/images/avatars/uifaces5.jpg" alt="Craig Hansen">
+                                                                    </figure><!-- /members -->
+                                                                </div><!-- /.list-group-item-body -->
+                                                            </div><!-- /.list-group-item -->
+                                                            <!-- .list-group-item -->
+                                                            <div class="list-group-item pt-0" data-toggle="modal" data-target="#modalViewTask">
+                                                                <a href="#" class="stretched-link"></a> <!-- .list-group-item-body -->
+                                                                <div class="list-group-item-body">
+                                                                    <div class="progress progress-xs">
+                                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                                                    </div>
+                                                                </div><!-- /.list-group-item-body -->
+                                                                <!-- .list-group-item-figure -->
+                                                                <div class="list-group-item-figure">
+                                                                    <span class="todos">15/15</span>
+                                                                </div><!-- /.list-group-item-figure -->
+                                                            </div><!-- /.list-group-item -->
+                                                        </div><!-- /.list-group -->
+                                                    </div><!-- /.card-body -->
+                                                    <!-- .card-footer -->
+                                                    <div class="card-footer">
+                                                        <a href="#" class="card-footer-item card-footer-item-bordered text-muted" data-toggle="modal" data-target="#modalViewTask"><i class="oi oi-comment-square mr-1"></i> 12</a> <a href="#" class="card-footer-item card-footer-item-bordered text-muted"><i class="fa fa-play text-teal"></i></a>
+                                                    </div><!-- /.card-footer -->
+                                                </div><!-- .card -->
+                                            </div><!-- /.task-issue -->
+                                        </div><!-- /.task-body -->
+                                    </div><!-- /.tasks -->
+                                    <!-- .task-action -->
+                                    <div class="tasks-action">
+                                        <!-- .publisher -->
+                                        <div class="publisher">
+                                            <!-- .publisher-input -->
+                                            <div class="publisher-input pr-0">
+                                                <input class="form-control" placeholder="+ Enter list title">
+                                            </div><!-- /.publisher-input -->
+                                            <!-- .publisher-actions -->
+                                            <div class="publisher-actions">
+                                                <!-- .publisher-tools -->
+                                                <div class="publisher-tools pb-0">
+                                                    <button type="submit" class="btn btn-primary">Add List</button> <button type="button" class="btn btn-light">Cancel</button>
+                                                </div><!-- /.publisher-tools -->
+                                            </div><!-- /.publisher-actions -->
+                                        </div><!-- /.publisher -->
+                                    </div><!-- /.task-action -->
+                                </div><!-- /.board -->
+
+
+
+
+
+
+
+                            </div><!-- /.page-section -->
+                        </div><!-- /.page-inner -->
+                    </div><!-- /.page -->
+                </div><!-- .app-footer -->
+                <footer class="app-footer">
+
+                    <div class="copyright"> Copyright © 2018. Todos Direitos Reservados Femabra. </div>
+                </footer><!-- /.app-footer -->
+                <!-- /.wrapper -->
+            </main><!-- /.app-main -->
+        </div><!-- /.app -->
+    </section>
+
+</div>
