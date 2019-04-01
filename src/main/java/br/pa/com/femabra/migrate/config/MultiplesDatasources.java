@@ -38,17 +38,4 @@ public class MultiplesDatasources    {
 
         return new JdbcTemplate(dsFemabra01);
     }
-    @Bean(name = "dsFemabra02")
-    @ConfigurationProperties(prefix="spring.datasource.db2")
-    public DataSource dataSourceFemabra02() {
-        return DataSourceBuilder.create().build();
-    }
-    @Bean(name = "jdbcFemabra02")
-    @Autowired
-    @Primary
-    public JdbcTemplate jdbcTemplateFemabra02(@Qualifier("dsFemabra02") DataSource dsFemabra02) {
-        return new JdbcTemplate(dsFemabra02);
-    }
-
-
 }

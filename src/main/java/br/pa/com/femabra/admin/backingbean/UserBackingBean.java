@@ -4,6 +4,7 @@ import br.pa.com.femabra.database.models.UserDTO;
 
 public class UserBackingBean {
 
+    public static final String SESSION_NAME_BEAN="userBackingBean" ;
 
     private String email;
 

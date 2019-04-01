@@ -7,11 +7,17 @@
 
     <section layout:fragment="content"    >
 
+
+
+
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="#">Fambra</a>
 
 
         </nav>
+        <!--<div id="content-render" >-->
+            <div th:text="${messenger}"></div>
+        <!--</div>-->
 
         <div class="position-absolute" style="left:50%; top:50%; margin-left:-160px; margin-top:-79px;">
             <div class="card bg-light mb-3" style="max-width: 18rem;">
@@ -26,6 +32,7 @@
                         </div>
 
                         <button type="submit" class="btn btn-default">Enviar</button>
+                        <!--<button  id="id_teste"  class="btn btn-default">Enviar</button>-->
                     </form>
                     </div>
                     <div th:if="${backingBean.activeFieldsUser} ==true" >
@@ -39,7 +46,8 @@
                             <label for="exampleInputPassword1">Senha</label>
                             <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
                         </div>
-                        <button type="submit" class="btn btn-outline-primary">Salvar</button>
+                        <button  type="submit" class="btn btn-outline-primary">atualizar</button>
+                            <!--<button  id="id_teste" class="btn btn-outline-primary">atualizar</button>-->
                         </form>
                     </div>
                 </div>

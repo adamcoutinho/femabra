@@ -1,6 +1,9 @@
 package br.pa.com.femabra.database.models;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
 import javax.persistence.*;
+import java.time.LocalTime;
 import java.util.Date;
 
 @Entity
@@ -10,10 +13,10 @@ public class UserDTO {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long ID;
     private String tokenSecurity;
-    @Temporal(value = TemporalType.DATE)
-    private Date expiration;
-    @Temporal(value = TemporalType.TIME)
-    private Date hourExpiration;
+    @Temporal(TemporalType.DATE)
+    private Date dateUpdate;
+
+    private LocalTime hourExpiration;
     private TypeUser typeUser;
     private String email;
     private String name;
@@ -22,10 +25,9 @@ public class UserDTO {
     public UserDTO() {
     }
 
-
-    public UserDTO(String tokenSecurity, Date expiration, Date hourExpiration, TypeUser typeUser, String email, String name, String passwd) {
+    public UserDTO(String tokenSecurity, Date dateUpdate, LocalTime hourExpiration, TypeUser typeUser, String email, String name, String passwd) {
         this.tokenSecurity = tokenSecurity;
-        this.expiration = expiration;
+        this.dateUpdate = dateUpdate;
         this.hourExpiration = hourExpiration;
         this.typeUser = typeUser;
         this.email = email;
@@ -47,6 +49,22 @@ public class UserDTO {
 
     public void setTokenSecurity(String tokenSecurity) {
         this.tokenSecurity = tokenSecurity;
+    }
+
+    public Date getDateUpdate() {
+        return dateUpdate;
+    }
+
+    public void setDateUpdate(Date dateUpdate) {
+        this.dateUpdate = dateUpdate;
+    }
+
+    public LocalTime getHourExpiration() {
+        return hourExpiration;
+    }
+
+    public void setHourExpiration(LocalTime hourExpiration) {
+        this.hourExpiration = hourExpiration;
     }
 
     public TypeUser getTypeUser() {
@@ -79,5 +97,20 @@ public class UserDTO {
 
     public void setPasswd(String passwd) {
         this.passwd = passwd;
+    }
+
+
+    @Override
+    public String toString() {
+        return "UserDTO{" +
+                "ID=" + ID +
+                ", tokenSecurity='" + tokenSecurity + '\'' +
+                ", dateUpdate=" + dateUpdate +
+                ", hourExpiration=" + hourExpiration +
+                ", typeUser=" + typeUser +
+                ", email='" + email + '\'' +
+                ", name='" + name + '\'' +
+                ", passwd='" + passwd + '\'' +
+                '}';
     }
 }
